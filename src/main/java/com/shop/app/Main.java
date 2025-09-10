@@ -7,6 +7,9 @@ import com.shop.model.*;
 import com.shop.service.Shop;
 import com.shop.service.ShopRating;
 import com.shop.exceptions.*;
+import com.shop.funtionalInterfaces.InventoryAdjuster;
+import com.shop.funtionalInterfaces.PaymentVerifier;
+import com.shop.funtionalInterfaces.ShippingEstimator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -37,11 +40,11 @@ public class Main {
         categoryIdSet.add(new Object[]{electronics, 23443234L});
         categoryIdSet.add(new Object[]{accesories, 56767675L});
 
-        for (Object[] pair : categoryIdSet) {
+        categoryIdSet.stream().forEach(pair -> {
             Category category = (Category) pair[0];
             Long id = (Long) pair[1];
             category.setId(id);
-        }
+        });
 
         inventory.addProduct(new Product("Cellphone Gen 26", 1100, electronics));
         inventory.addProduct(new Product("Laptop Gen 26", 1950, electronics));
@@ -49,6 +52,28 @@ public class Main {
         inventory.addProduct(new Product("Deluxe Laptop Case", 39.99, accesories));
         inventory.addProduct(new Product("Retro Headphones", 499, electronics));
 
+        InventoryAdjuster adjuster = (inv, product, delta) -> {
+            if (delta > 0) {
+                for (int i = 0; i < delta; i++) {
+                    inv.addProduct(product);
+                }
+                return inv.getAvailableProducts().size();
+            } else {
+                return inv.getAvailableProducts().size();
+            }
+        };
+
+        PaymentVerifier verifier = (payment, amount) -> {
+            return payment != null && amount > 0;
+        };
+
+        ShippingEstimator estimator = (origin, destination, weightKg) -> {
+            if (origin.getCity().equalsIgnoreCase(destination.getCity())) {
+                return 5.0 + (weightKg * 0.5);
+            } else {
+                return 15.0 + (weightKg * 1.2);
+            }
+        };
 
         LOGGER.info("What's your name?");
         String name = scanner.nextLine();
@@ -261,3 +286,4 @@ public class Main {
 
     }
 }
+
