@@ -1,5 +1,8 @@
 package com.shop.model;
 
+import com.shop.annotations.Role;
+
+@Role(priority = 4)
 public class VipUser extends User {
     private String username;
 

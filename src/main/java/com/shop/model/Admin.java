@@ -1,5 +1,8 @@
 package com.shop.model;
 
+import com.shop.annotations.Role;
+
+@Role(priority = 5)
 public class Admin extends User {
     private String username;
 

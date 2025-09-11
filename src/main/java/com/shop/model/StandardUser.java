@@ -1,5 +1,8 @@
 package com.shop.model;
 
+import com.shop.annotations.Role;
+
+@Role(priority = 3)
 public class StandardUser extends User {
     private String username;
 

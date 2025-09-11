@@ -1,8 +1,12 @@
 package com.shop.model;
 
+import com.shop.annotations.Positive;
+
 public abstract class ProductItem {
 
     protected String name;
+
+    @Positive
     protected double price;
 
     public String getName() {

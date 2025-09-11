@@ -1,7 +1,9 @@
 package com.shop.model;
 
+import com.shop.annotations.Role;
 import com.shop.interfaces.Identifiable;
 
+@Role(priority = 2)
 public class Customer extends User implements Identifiable<Long> {
 
     private Address address;

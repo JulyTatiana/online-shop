@@ -1,5 +1,6 @@
 package com.shop.model;
 
+import com.shop.annotations.Loggable;
 import com.shop.interfaces.Restocking;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -29,6 +30,7 @@ public class Inventory implements Restocking {
     }
 
     @Override
+    @Loggable("Restocking inventory")
     public void restock() {
          LOGGER.warn("It's needed to evaluate restocking: " + availableProducts);
     }

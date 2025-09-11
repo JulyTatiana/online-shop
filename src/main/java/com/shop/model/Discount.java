@@ -1,11 +1,14 @@
 package com.shop.model;
 
+import com.shop.annotations.Range;
 import com.shop.interfaces.Identifiable;
 
 public class Discount implements Identifiable <Long> {
 
     private Long id;
     private String code;
+
+    @Range(min = 0, max = 100)
     private int percentage;
     private double minimumPurchase;
     private String description;
