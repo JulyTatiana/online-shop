@@ -3446,3 +3446,27 @@ Cart: $1100.0
 2025-09-11 00:11:43,970 INFO c.s.a.Main [main] Hi July! How would you rate our shop from 1 to 10?
 2025-09-11 00:11:45,056 INFO c.s.a.Main [main] Please, leave a comment for us
 2025-09-11 00:11:47,022 INFO c.s.a.Main [main] Thanks for your rating of: 2 and for your sincere comment: << lqenc >>. This helps us to improve!
+2025-09-11 00:25:11,825 INFO c.s.a.Main [main] What's your name?
+2025-09-11 00:25:16,697 INFO c.s.a.Main [main] Please enter your street
+2025-09-11 00:25:18,204 INFO c.s.a.Main [main] Please enter your city
+2025-09-11 00:25:20,164 INFO c.s.a.Main [main] Type/Write only the number according to the person you are: Customer (2), VIP Customer (3), Admin (4), Cashier (5)
+2025-09-11 00:25:21,680 INFO c.s.s.Shop [main] AVAILABLE PRODUCTS:
+2025-09-11 00:25:21,686 INFO c.s.s.Shop [main] 1. Cellphone Gen 26 - $1100.0
+2025-09-11 00:25:21,686 INFO c.s.s.Shop [main] 2. Laptop Gen 26 - $1950.0
+2025-09-11 00:25:21,686 INFO c.s.s.Shop [main] 3. Laptop Case - $29.99
+2025-09-11 00:25:21,687 INFO c.s.s.Shop [main] 4. Deluxe Laptop Case - $39.99
+2025-09-11 00:25:21,687 INFO c.s.s.Shop [main] 5. Retro Headphones - $499.0
+2025-09-11 00:25:21,687 INFO c.s.a.Main [main] Select product number to add to cart (Type 0 to finish adding items and go to the Checkout):
+2025-09-11 00:25:23,599 INFO c.s.a.Main [main] Added to cart: Cellphone Gen 26
+2025-09-11 00:25:23,600 INFO c.s.a.Main [main] Select another product (0 to finish):
+2025-09-11 00:25:24,886 INFO c.s.a.Main [main] Please select your payment method: 1 for cash or 2 for card
+2025-09-11 00:25:25,939 INFO c.s.a.Main [main] As a Customer, you get priority level 2
+2025-09-11 00:25:25,939 INFO c.s.a.Main [main] 
+Cart: $1100.0
+2025-09-11 00:25:25,944 INFO c.s.m.ConfirmationMessage [main] Your payment of $990.0 USD via Credit Card was approved.
+2025-09-11 00:25:25,945 INFO c.s.a.Main [main] Order placed successfully for July! Please do NOT share your account info
+2025-09-11 00:25:25,958 INFO c.s.a.Main [main] Order{customer=Customer{name='July', address=Address[street=ksfjsbdfjd, city=sdkfnsdf]}, products=[Product{name='Cellphone Gen 26', price=1100.0, category=Category{id=23443234, name='Electronics'}}], total=990.0, status=null, paymentMethod=CREDIT_CARD}
+2025-09-11 00:25:25,959 INFO c.s.a.Main [main] Hi July! How would you rate our shop from 1 to 10?
+2025-09-11 00:25:28,011 INFO c.s.a.Main [main] Please, leave a comment for us
+2025-09-11 00:25:30,368 INFO c.s.a.Main [main] Thanks for your rating of: 3 and for your sincere comment: << kfvmdf >>. This helps us to improve!
+2025-09-11 00:27:49,132 INFO c.s.a.Main [main] What's your name?

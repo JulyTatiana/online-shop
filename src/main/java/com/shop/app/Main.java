@@ -284,6 +284,21 @@ public class Main {
         String outputFilePath = "src/main/resources/output.txt";
         SpecialWordCounter.countAndWrite(inputFilePath, outputFilePath);
 
+        System.out.println("\n----- Reflection Annotation Check -----");
+
+        Class<?>[] userClasses = new Class[]{com.shop.model.Admin.class,
+                com.shop.model.Customer.class,
+                com.shop.model.StandardUser.class,
+                com.shop.model.VipUser.class};
+
+        for (Class<?> cls : userClasses) {
+            if (cls.isAnnotationPresent(com.shop.annotations.Role.class)) {
+                com.shop.annotations.Role role = cls.getAnnotation(com.shop.annotations.Role.class);
+                System.out.printf("Class '%s' has Role priority = %d%n", cls.getSimpleName(), role.priority());
+            }
+        }
+        System.out.println("----- End of Reflection -----");
+
     }
 }
 
