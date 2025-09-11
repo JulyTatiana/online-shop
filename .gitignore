@@ -1,0 +1,21 @@
+# Maven build output
+/target/
+
+# IntelliJ IDEA project files
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# OS junk files
+.DS_Store
+Thumbs.db
+
+# IntelliJ specific
+
+# Default ignored files
+/shelf/
+/workspace.xml
+# Environment-dependent path to Maven home directory
+/mavenHomeManager.xml
